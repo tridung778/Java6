@@ -1,0 +1,14 @@
+{
+  "name": "Nguyễn Văn Tèo 4",
+  "gender": true,
+  "marks": 10,
+  "contact": {
+    "phone": "0123456789",
+    "email": "kQb5r@example.com",
+    "subject": {
+      "Java": "Java",
+      "C++": "C++",
+      "C#": "C#"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "gender": true,
+  "subject": [
+    "Java",
+    "C++",
+    "C#"
+  ],
+  "contact": {
+    "phone": "0123456789",
+    "subject": [
+      "Java",
+      "C++",
+      "C#"
+    ],
+    "email": "pTJpE@example.com"
+  },
+  "name": "Nguyễn Văn Tèo 4",
+  "marks": 10
+}
