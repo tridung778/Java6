@@ -22,8 +22,8 @@ public class StreamAPI {
     public static void main(String[] args) {
 //        demo1();
 //        demo2();
-//        demo3();
-        demo4();
+        demo3();
+//        demo4();
     }
 
     private static void demo1() {
