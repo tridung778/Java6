@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" th:replace="~{layout/layout :: dymamic(~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h3>Data Binding</h3>
+<form action="/student2/save" method="post" th:object="${student}">
+    <input type="text" th:field="*{email}" placeholder="Email">
+    <i th:errors="*{email}"></i><br>
+    <input type="text" th:field="*{fullName}" placeholder="Full Name">
+    <i th:errors="*{fullName}"></i><br>
+    <input type="number" th:field="*{marks}" placeholder="Marks">
+    <i th:errors="*{marks}"></i><br>
+    <input type="radio" th:field="*{gender}" th:value="true">Male
+    <input type="radio" th:field="*{gender}" th:value="false"> Female
+    <i th:errors="*{gender}"></i><br>
+    <select th:field="*{country}">
+        <option value="">Nationality</option>
+        <option value="VN">Viet Nam</option>
+        <option value="US">United State</option>
+    </select>
+    <i th:errors="*{country}"></i>
+    <br>
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>

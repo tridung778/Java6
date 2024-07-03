@@ -1,0 +1,14 @@
+{
+  "name": "dung",
+  "gender": true,
+  "mark": 10,
+  "contact": {
+    "phone": "123",
+    "email": "dung@123",
+    "address": "HCM"
+  },
+  "subject": [
+    "English",
+    "Math"
+  ]
+}

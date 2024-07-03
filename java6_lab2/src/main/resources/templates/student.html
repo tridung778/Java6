@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/student(index=${index+1})}">Next</a>
+<ul th:object="${student}">
+    <li th:text="*{name}"></li>
+    <li th:text="*{gender}"></li>
+    <li th:text="*{mark}"></li>
+    <li th:text="*{contact}"></li>
+    <li th:text="*{subject}"></li>
+</ul>
+</body>
+</html>

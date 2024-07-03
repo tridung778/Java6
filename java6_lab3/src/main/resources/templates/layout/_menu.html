@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="navbar">
+    <a th:href="@{/home/index}" th:text="#{nav.home}"></a> |
+    <a th:href="@{/home/about}" th:text="#{nav.about}"></a> |
+    <a th:href="@{/student2/form}" th:text="#{nav.student}"></a> |
+    <a href="?lang=vi">Tieng viet</a>
+    <a href="?lang=en">Tieng anh</a>
+</div>
+</body>
+</html>

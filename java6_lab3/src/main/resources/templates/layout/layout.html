@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="dymamic(content)">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <img th:src="@{/images/cat.jpg}" width="150" alt="">
+</header>
+<hr>
+<nav th:insert="~{/layout/_menu::navbar}"></nav>
+<hr>
+<main th:replace="${content}"></main>
+<hr>
+<footer>FPT Polytechnic &copy; 2024. All rights reserved.</footer>
+</body>
+</html>

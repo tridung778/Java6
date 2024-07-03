@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="student, state : ${students}">
+        <a th:href="@{|/students/list?index=${state.index}|}" th:text="${student.name}"></a>
+    </li>
+</ul>
+<h3>Student detail</h3>
+<ul th:object="${student}">
+    <li th:text="${student.name}"></li>
+    <li th:text="${student.gender}"></li>
+    <li th:text="${student.mark}"></li>
+    <li th:text="${student.contact.address}"></li>
+    <li>
+        <ul th:each="subject : ${student.subject}">
+            <li th:text="${subject}"></li>
+        </ul>
+    </li>
+    <li th:switch="*{#arrays.length(subject)}">
+        <i>Time: </i>
+        <b th:case="1">Moi vao</b>
+        <b th:case="2">Dang hoc</b>
+        <b th:case="*">Sap ra truong</b>
+    </li>
+    <li th:if="*{mark > 9}"><i>Title: </i><b>Golden Bee</b></li>
+</ul>
+</body>
+</html>

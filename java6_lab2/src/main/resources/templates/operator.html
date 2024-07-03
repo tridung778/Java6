@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Demo Operator</h1>
+<ul>
+    <li th:text="${x + y}"></li>
+    <li th:text="${x % y}"></li>
+    <li th:text="not ${x > y}"></li>
+    <li th:text="${x gt y} and ${x == y}"></li>
+    <li th:text="${x > y} ? 'Cancel' : 'Ok'"></li>
+    <li th:text="@{|/a/b/${x}/${y}|}"></li>
+    <li th:text="'/a/b' + ${x} + '/' + ${y}"></li>
+    <li th:text="@{/a/b/{p1}/{p2}(p1=${x}, p2=${y})}"></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h3>Data Binding</h3>
+<form action="/student/save" method="post" th:object="${student}">
+    <input type="text" th:field="*{email}" placeholder="Email"><br>
+    <input type="text" th:field="*{fullName}" placeholder="Full Name"><br>
+    <input type="text" th:field="*{marks}" placeholder="Marks"><br>
+    <input type="radio" th:field="*{gender}" th:value="true">Male
+    <input type="radio" th:field="*{gender}" th:value="false"> Female<br>
+    <select th:field="*{country}">
+        <option value="">Nationality</option>
+        <option value="VN">Viet Nam</option>
+        <option value="US">United State</option>
+    </select>
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>

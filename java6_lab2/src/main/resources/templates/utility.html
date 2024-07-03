@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Utility Object</h3>
+<ul>
+    <li th:text="${#dates.format(now, 'EEE, yyyy-MM-dd')}"></li>
+    <li>Number of students: <span th:text="${#lists.size(students)}"></span></li>
+</ul>
+<h3>Danh sach </h3>
+<ul th:each="student : ${students}">
+    <li>
+        Name:
+        <b th:text="*{#strings.capitalizeWords(student.name)}"></b>
+    </li>
+    <li>
+        Mark:
+        <b th:text="*{#numbers.formatDecimal(student.mark, 0 , 'COMMA', 2,'POINT' )}"></b>
+    </li>
+    <li>
+        Number of object:
+        <b th:text="*{#arrays.length(student.subject)}"></b>
+    </li>
+</ul>
+</body>
+</html>

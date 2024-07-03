@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<img th:src="@{/images/1105.jpg}" alt="logo">
+<nav th:replace="~{/layout/menu.html}"></nav>
+<h1 th:text="${message}"></h1>
+<ul th:object="${student}">
+    <li th:text="*{name}"></li>
+    <li th:text="*{gender}"></li>
+    <li th:text="*{mark}"></li>
+    <li th:text="*{contact}"></li>
+    <li th:text="*{subject}"></li>
+</ul>
+</body>
+</html>

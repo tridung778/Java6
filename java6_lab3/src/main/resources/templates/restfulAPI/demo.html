@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+            integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body ng-app="myApp" ng-controller="ctrl">
+<!--form-->
+<div>
+    <input ng-model="form.fullName" placeholder="Full name?"><br>
+    <input ng-model="form.email" placeholder="Email?"><br>
+    <input ng-model="form.marks" placeholder="Marks?"><br>
+    <input ng-model="form.gender" ng-value="true" type="radio" name="gender">
+    <label>Male</label>
+    <br>
+    <input ng-model="form.gender" ng-value="false" type="radio" name="gender">
+    <label>Female</label>
+    <br>
+    <select ng-model="form.country">
+        <option ng-value="VN">Viet Nam</option>
+        <option ng-value="US">USA</option>
+    </select>
+    <button ng-click="add()">Add</button>
+    <button ng-click="delete(key)">Delete</button>
+    <button ng-click="update()">Update</button>
+    <button ng-click="reset()">Reset</button>
+</div>
+<!--table-->
+<table>
+    <tr>
+        <th>Full name?</th>
+        <th>Email?</th>
+        <th>Marks?</th>
+        <th>Gender?</th>
+        <th>Country?</th>
+        <th>Action?</th>
+    </tr>
+    <tr ng-repeat="(key, stu) in students">
+        <td>{{stu.fullName}}</td>
+        <td>{{stu.email}}</td>
+        <td>{{stu.marks}}</td>
+        <td>{{stu.gender?'Female':'Male'}}</td>
+        <td>{{stu.country}}</td>
+        <td>
+            <button ng-click="edit(key)">Edit</button>
+            <button ng-click="delete(key)">Delete</button>
+        </td>
+    </tr>
+</table>
+<script type="module" src="demo.js"></script>
+</body>
+</html>

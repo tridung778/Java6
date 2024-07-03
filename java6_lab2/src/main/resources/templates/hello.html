@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:text="${message}"></li>
+    <li th:utext="${message}">></li>
+</ul>
+<ul>
+    <li>[[${message}]]</li>
+    <li>[(${message})]</li>
+</ul>
+</body>
+</html>

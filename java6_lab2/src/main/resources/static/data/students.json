@@ -1,0 +1,58 @@
+[
+  {
+    "name": "dung",
+    "gender": true,
+    "mark": 10,
+    "contact": {
+      "phone": "123",
+      "email": "dung@123",
+      "address": "HCM"
+    },
+    "subject": [
+      "English",
+      "Math"
+    ]
+  },
+  {
+    "name": "dung",
+    "gender": true,
+    "mark": 9,
+    "contact": {
+      "phone": "123",
+      "email": "dung@123",
+      "address": "HCM"
+    },
+    "subject": [
+      "English"
+    ]
+  },
+  {
+    "name": "dung",
+    "gender": true,
+    "mark": 8,
+    "contact": {
+      "phone": "123",
+      "email": "dung@123",
+      "address": "HCM"
+    },
+    "subject": [
+      "English",
+      "Math",
+      "Science"
+    ]
+  },
+  {
+    "name": "dung",
+    "gender": true,
+    "mark": 7,
+    "contact": {
+      "phone": "123",
+      "email": "dung@123",
+      "address": "HCM"
+    },
+    "subject": [
+      "English",
+      "Math"
+    ]
+  }
+]
