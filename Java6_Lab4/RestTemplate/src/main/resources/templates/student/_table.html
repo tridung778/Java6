@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Full Name</th>
+        <th>Marks</th>
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="student : ${students}" th:object="${student.value}">
+        <td>[[*{email}]]</td>
+        <td>[[*{fullName}]]</td>
+        <td>[[*{marks}]]</td>
+        <td>[[*{gender}]]</td>
+        <td>[[*{country}]]</td>
+        <td><a th:href="@{|/student/edit/${student.key}|}">Edit</a></td>
+        <td><a th:href="@{|/student/delete/${student.key}|}">Delete</a></td>
+    </tr>
+</table>
+</body>
+</html>

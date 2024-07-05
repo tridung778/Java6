@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:object="${student}">
+    <input type="text" th:field="*{email}" placeholder="Email"><br>
+    <input type="text" th:field="*{fullName}" placeholder="Full Name"><br>
+    <input type="text" th:field="*{marks}" placeholder="Marks"><br>
+    <input type="radio" th:field="*{gender}" th:value="true">Male
+    <input type="radio" th:field="*{gender}" th:value="false"> Female<br>
+    <select th:field="*{country}">
+        <option value="">Nationality</option>
+        <option value="VN">Viet Nam</option>
+        <option value="US">United State</option>
+    </select>
+    <button th:formaction="@{/student/create}">Create</button>
+    <button th:formaction="@{|/student/update/${key}|}">Update</button>
+    <button th:formaction="@{|/student/delete/${key}|}">Delete</button>
+    <button th:formaction="@{/student/index}">Reset</button>
+</form>
+</body>
+</html>
