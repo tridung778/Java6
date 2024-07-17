@@ -9,17 +9,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Student2 {
-    @NotBlank(message = "Email không được để trống")
-    @Email(message = "Email phải đúng định dạng")
+    @NotBlank(message = "{error.email}")
+    @Email(message = "{error.validEmail}")
     String email;
-    @NotBlank(message = "Họ tên không được để trống")
+    @NotBlank(message = "{error.name}")
     String fullName;
-    @NotNull(message = "Điểm không được để trống")
-    @PositiveOrZero(message = "Điểm phải lớn hơn 0")
-    @Max(value = 10, message = "Điểm phải bé hơn hoặc bằng 10")
+    @NotNull(message = "{error.mark}")
+    @PositiveOrZero(message = "{error.markPositiveOrZero}")
+    @Max(value = 10, message = "{error.markMax10}")
     Double marks;
-    @NotNull(message = "Giới tính không được để trống")
+    @NotNull(message = "{error.gender}")
     Boolean gender;
-    @NotBlank(message = "Quốc tịch không được để trống")
+    @NotBlank(message = "{error.nation}")
     String country;
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<label>Upload file:
+    <input type="file" accept="image/*" multiple
+           onchange="angular.element(this).scope().upload(this.files)">
+</label>
+<hr>
+<div ng-repeat="filename in filenames" title="Double click to delete">
+    <img width="100px" ng-src="{{url(filename)}}" alt="" ng-dblclick="delete(filename)">
+</div>
+<script src="file-ctrl.js"></script>
+</body>
+</html>

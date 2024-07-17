@@ -27,7 +27,6 @@ public class JMainFrame extends javax.swing.JFrame {
      */
     public JMainFrame() {
         initComponents();
-//        tblConsumer.setDis();
     }
 
     void fillTable() {
@@ -377,16 +376,15 @@ public class JMainFrame extends javax.swing.JFrame {
 
     private void tblConsumerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblConsumerMouseClicked
         // TODO add your handling code here:
-        if (evt.getClickCount() == 2) {
+//        tblConsumer.setRowSelectionAllowed(false);
+        if (evt.getClickCount() == 1) {
             int row = tblConsumer.getSelectedRow();
 //            for (int i = 0; i < items.keySet().toArray().length; i++) {
 //                System.out.println(items.keySet().toArray()[i]);
 //            }
             System.out.println(row);
             String key = (String) items.keySet().toArray()[row];
-//            System.out.println(key);
             this.edit(key);
-
         }
     }//GEN-LAST:event_tblConsumerMouseClicked
 

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<input type="file" onchange="angular.element(this).scope().import(this.files)">
+<script src="excel-ctrl.js"></script>
+</body>
+</html>
